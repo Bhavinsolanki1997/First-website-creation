@@ -1,12 +1,414 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top Rated Wedding Planner</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400;500&family=Crimson+Text:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet"  href="phon.css/Phone.css"  media="screen and (max-width: 1273px)">
+
+  <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* display: flex; */
+        box-sizing: border-box;
+      }
+#navbar{position: relative;}
+      #navbar {
+        /* position: absolute; */
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        top: 0px;
+        width: 100%;
+        left: 0px;
+      }
+      #logo {
+        margin: 7px 20px;
+      }
+      #logo img {
+        margin: 7px 7px;
+        height: 63px;
+        /* /* border-top-left-radius: 30px;: 30px ; */
+
+        border-radius: 30px 0px 30px 0px;
+      }
+      #navbar ul {
+        display: flex;
+      }
+      #navbar ::before {
+        content: "    ";
+        background-color: rgb(222, 80, 135);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
+
+        opacity: 0.5;
+      }
+
+      #navbar ul li {
+        list-style: none;
+        font-size: 1.1rem;
+      }
+      #navbar ul li a {
+        /* list-style: none; */
+        display: block;
+        padding: 9px 9px;
+        margin: 21px 21px;
+        text-decoration: none;
+        border-radius: 21px;
+        color: white;
+        font-family: "Baloo Bhai 2", cursive;
+      }
+      #navbar ul li a:hover {
+        color: rgb(244, 124, 111);
+        background-color: white;
+      }
+      /* home styling */
+      #home{
+        position: relative;
+      }
+
+      #home::before {
+        /* content: "    ";
+        background: url("Image\ 9.jpg") no-repeat center center;
+        position: absolute;
+        height: 0%;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        z-index: -2;
+        opacity: 0.7;
+        padding: 389px 30px;
+        padding-bottom: 427px; */
+        content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url(bg\ 2.jpg) no-repeat center center;
+z-index: -2;
+opacity: 1;
+      }
+      #home {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        /* height: 10%; */
+        /* margin: 158px 335px; */
+        /* margin-top: 4px; */
+        /* padding: 82px 42px; */
+        padding-bottom: 21px;
+      }
+      #home h1 {
+        color: white;
+        /* color: rgb(239, 90, 147); */
+        /* text-align: center; */
+        font-size: 1.89rem;
+        margin-top  : 34px;
+        padding-right: 78px;
+        font-family: "Baloo Bhai 2", cursive;
+        display: flex;
+        justify-content: center;
+      }
+      #home p {
+        /* color: rgb(240, 144, 181); */
+        /* text-align: center; */
+        color: aliceblue;
+        margin: 0px 58px;
+        font-size: 1.4rem;
+        /* color: rgb(217 180 95); */
+        margin-top  : 14px;
+        padding-right: 78px;
+        font-family: "Baloo Bhai 2", cursive;
+        display: flex;
+        justify-content: center;
+      }
+      .button {
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        left: 131%;
+        text-align: left;
+        justify-content: left;
+        /* padding: 6px 20px; */
+        /* margin: 17px; */
+        border: 2px solid palevioletred;
+        /* border-radius: 21px; */
+      }
+      .button input {
+        border-radius: 21px;
+        /* padding:6px 20px ; */
+      }
+      /* Service styling */
+      #service {
+        /* border: 2px solid red; */
+        display: flex;
+        margin: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #service .box {
+        /* border: 2px solid white; */
+        text-align: center;
+        justify-content: center;
+        /* padding-bottom: 13px; */
+        padding: 12px;
+        margin: 25px;
+        border-radius: 7px;
+      }
+      #service .box p {
+        margin: 16px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        font-family: "Baloo Bhai 2", cursive;
+        color: rgb(82, 81, 81);
+      }
+      .service-container h1 {
+        display: flex;
+        /* text-align: center; */
+        /* margin-top: -196px; */
+        padding-top: 24px;
+        /* margin:0px 535px; */
+        justify-content: center;
+      }
+      .service-container {
+        /* background-color: antiquewhite; */
+        /* background: url(bg.jpg) no-repeat center center; */
+        display: block;
+        width: 100%;
+        /* display: flex; */
+      }
+
+      #service .box img {
+        display: flex;
+        height: 258px;
+        width: 358px;
+        margin: auto;
+        border-radius: 7px;
+      }
+      #service .box img:hover {
+        transform: scale(1.05);
+        
+      }
+      h2 {
+        margin: 12px;
+      }
+      .box ul a {
+        text-decoration: none;
+        padding: 5px;
+        border: 2px solid rgb(233, 75, 64);
+        margin: 12px;
+        color: rgb(233, 75, 64);
+      }
+      .box ul a:hover {
+        background-color: rgb(240, 33, 137);
+        color: white;
+      }
+      /* contact Section */
+      #contact {
+        position: relative;
+      }
+      #contact h1 {
+        display: flex;
+        /* width: 100%; */
+        /* align-items: center; */
+        /* text-align: center; */
+        justify-content: center;
+        padding: 12px;
+        /* margin: 0px 535px; */
+      }
+      #contact ::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: url("bg.jpg") no-repeat center center;
+      }
+      #contact-box {
+        display:flex
+        /* align-items: center; */
+        justify-content: center;
+        padding-top: 12px;
+        /* margin:0px 478px; */
+        padding-bottom: 34px;
+        /* text-align: center; */
+      }
+      #contact-box input {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        border-radius: 18px;
+        font-size: 1.1rem;
+        padding: 2px;
+        margin: 4px;
+      }
+      #contact-box form {
+        width: 100%;
+        align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+        /* align-items: center; */
+      }
+      #contact-box label {
+       font-size: 1.2rem;
+       justify-content: center;
+        
+      }
+      footer {
+        background: rgb(51, 33, 35);
+        color: white;
+        /* justify-content: center; */
+        text-align: center;
+        /* padding: 0px 404px; */
+        width: 100%;
+        padding: 4px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav id="navbar">
+        <div id="logo">
+          <img src="logo.jpg" alt="error" />
+        </div>
+        <ul>
+          <li class="item" id="item1"><a href="#">Menu</a></li>
+          <li class="item" id="item2"><a href="#">Venue</a></li>
+          <li class="item" id="item3"><a href="#">Vendor</a></li>
+          <li class="item" id="item4"><a href="#">Gallery</a></li>
+          <li class="item" id="item5"><a href="#">Contact us</a></li>
+        </ul>
+        <!-- <button class="button" name="button">
+          <label for="button">Search </label>
+          <input type="text" />
+        </button> -->
+      </nav>
+      <section id="home">
+        <h1 class="h-primary">Your Wedding, Your Way</h1>
+        <p>Find the best wedding vendors with thousands of trusted reviews.</p>
+        <p></p>
+      </section>
+      <section class="service-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="service">
+          <div class="box">
+            <img class="extra radius" src="Image 7.jpg" alt="" />
+            <h2 class="h-secondary center">Dinner planner</h2>
+            <p>find an elaborate showcase of over 990 wedding caterers<br> at your wedding that would win hearts all over!</p>
+            <ul>
+              <a href="#">Know More</a>
+            </ul>
+          </div>
+          <div class="box">
+            <img class="extra radius" src="Image 4.jpg" alt="" />
+            <h2 class="h-secondary center">Bribe Entry Ideas</h2>
+            <p>Plan your dream wedding with exciting entry ideas.</p>
+            <ul>
+              <a href="#">Know More</a>
+            </ul>
+          </div>
+          <div class="box">
+            <img class="extra radius" src="Image 3.jpg" alt="" />
+            <h2 class="h-secondary center">Venue Ideas</h2>
+            <p>More Than 100+ venue decoration ideas are waiting for you.</p>
+            <ul>
+              <a href="#">Know More</a>
+            </ul>
+          </div>
+          <div class="box">
+            <img class="extra radius" src="Groom Entry.jpg" alt="" />
+            <h2 class="h-secondary center">Groom Entery Ideas</h2>
+            <p>Crazy Ideas for groom entry .</p>
+            <ul>
+              <a href="#">Know More</a>
+            </ul>
+          </div>
+          <div class="box">
+            <img class="extra radius"  src="Clothing.jpg" alt="" />
+            <h2 class="h-secondary center">Clothing</h2>
+            <p>Find diffrent types of clothig tips accoring to marraige day .</p>
+            <ul>
+              <a href="#">Know More</a>
+            </ul>
+          </div>
+          <div class="box">
+            <img class="extra radius" src="Pose.jpg" alt="" />
+            <h2 class="h-secondary center">Wedding Pose</h2>
+            <p>its very imporatnt how to look stunning in photographs.</p>
+            <ul>
+              <a href="#">Know More</a>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
     
-</body>
+    <hr>
+    <br>
+    <section id="contact">
+      <h1 class="h-primary center">Contact Us</h1>
+      <div id="contact-box">
+        <form action="">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Your Name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Email</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Your Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="name">Phone</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter Your Number"
+            />
+          </div>
+        </form>
+      </div>
+    </section>
+    <footer>
+      <div class="center">
+        copyright &copy; www.topratedweddingplanner.com All rights reserved!
+      </div>
+    </footer>
+  </body>
 </html>
