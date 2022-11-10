@@ -1,0 +1,26 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #navbar ul li a {
+    size: 1.0rem;
+  }
+
+.service-container {
+    flex-direction: wrap;
+}
+
+#service {
+    /* grid-template-columns: 1fr; */
+    flex-wrap: wrap;
+}
