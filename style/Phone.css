@@ -2,20 +2,35 @@ body {
   /* background-color: red; */
   /* display:flex; */
   /* flex-direction: column; */
-  display: grid;
+  /* display: grid; */
   /* grid-template-columns: 1fr ; */
+  /* overflow-anchor: 50%; */
+  /* position: fixed; */
+  box-sizing: border-box;
+  /* justify-content: center; */
+
+
 }
+/* div{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+} */
 /* navigation  */
 #navbar {
+  margin: 0px;
+  padding: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
 }
-/* #navbar ul li a{
-    size: 1rem;
+ /* #navbar ul li{
+    size: 0.5rem;
     margin-top: 0px;
-    margin: 6px 21px
+    margin: 0px;
+    padding: 0px;
  } */
 #logo {
   margin: -3px 20px;
@@ -28,15 +43,28 @@ body {
         padding: 21px 42px;
 }
 
+#home h1{
 
+  font-size: 1.5rem;
+  padding: 0px;
+}
+/* 
 #service {
   /* flex-direction: column; */
-  display: grid;
-  grid-template-columns: 1fr;   
+  /* display: grid; */
+  /* grid-template-columns: 1fr;    */
   /* flex-wrap: wrap; */
   /* align-items: stretch; */
-}
+ */
 
+.service-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+ul li a {
+padding: 3px 6px;
+margin: 12px 0px;}
 /*    
 
 #service .box {
